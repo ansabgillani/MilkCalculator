@@ -83,6 +83,15 @@ table, th, td {
   );
 }
 
+.link {
+    color: #b97a95;
+    text-decoration: none;
+}
+.link:hover{
+    color: #3e2c41;
+}
+
+
 @media only screen and (max-width: 600px) {
   #rangePicker {
     display: block !important;
