@@ -1,0 +1,164 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container" style="height: 100%; width: 100%">
+  <form action="/blend" method="POST" style="height: 90vh; width: 100%" id="milkForm">
+    <div class="row" style="height: 40%">
+      <div
+        class="
+          col-md-12
+          d-md-flex
+          justify-content-md-center
+          align-items-md-center
+        "
+        style="font-family: Sora, sans-serif; height: 50%"
+      >
+        <h1
+          class="
+            text-center
+            d-md-flex d-xl-flex
+            justify-content-md-center
+            align-items-md-center
+            justify-content-xl-center
+            align-items-xl-center
+          "
+          style="
+            font-family: Sora, sans-serif;
+            color: #082032;
+            height: 50%;
+            margin-top: 5rem;
+          "
+        >
+          Milk Calculator
+        </h1>
+      </div>
+    </div>
+    <div
+      class="row d-flex justify-content-center align-items-center"
+      id="rangePicker"
+    >
+      <div class="col" style="height: 30%; margin: 0 0.5rem">
+        <div class="range">
+          <input
+            name="fat"
+            id="fatRange"
+            type="range"
+            min="0.5"
+            max="10"
+            step="0.1"
+            value="5.2"
+          />
+          <h2 class="d-xxl-flex justify-content-xxl-center" id="fatHeading">
+            Fat - 5.2%
+          </h2>
+        </div>
+      </div>
+      <div class="col" style="height: 30%; margin: 0 0.5rem">
+        <div class="range">
+          <input
+            name="sugar"
+            id="sugarRange"
+            type="range"
+            min="0.5"
+            max="10"
+            step="0.1"
+            value="5.2"
+          />
+          <h2 class="d-xxl-flex justify-content-xxl-center" id="sugarHeading">
+            Sugar - 5.2%
+          </h2>
+        </div>
+      </div>
+      <div class="col" style="height: 30%; margin: 0 0.5rem">
+        <div class="range">
+          <input
+            name="protien"
+            id="protienRange"
+            type="range"
+            min="0.5"
+            max="10"
+            step="0.1"
+            value="5.2"
+          />
+          <h2 class="d-xxl-flex justify-content-xxl-center" id="protienHeading">
+            Protien - 5.2%
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="height: 25%">
+      <div
+        class="
+          col
+          d-flex d-lg-flex
+          justify-content-center
+          align-items-center
+          justify-content-lg-center
+          align-items-lg-start
+        "
+        style="padding: 24px"
+      >
+        <button
+          class="
+            btn btn-primary
+            text-center
+            d-flex d-lg-flex
+            justify-content-center
+            align-items-center
+            justify-content-lg-center
+            align-items-lg-center
+          "
+          form="milkForm"
+          type="submit"
+          value="Submit"
+          style="
+            background: #fcd8d4;
+            color: #082032;
+            border-radius: 20px;
+            padding: 10px 20px;
+            border-color: transparent;
+          "
+        >
+          Let's Blend!
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<script>
+  document.getElementById("fatRange").onchange = function () {
+    var value = this.value * (this.max - this.min);
+    this.style.background =
+      "linear-gradient(to right, #B97A95 0%, #B97A95 " +
+      value +
+      "%, #C9CCD5 " +
+      value +
+      "%, #C9CCD5 100%)";
+    document.getElementById("fatHeading").innerHTML =
+      "Fat - " + this.value + "%";
+  };
+
+  document.getElementById("sugarRange").onchange = function () {
+    var value = this.value * (this.max - this.min);
+    this.style.background =
+      "linear-gradient(to right, #B97A95 0%, #B97A95 " +
+      value +
+      "%, #C9CCD5 " +
+      value +
+      "%, #C9CCD5 100%)";
+    document.getElementById("sugarHeading").innerHTML =
+      "Sugar - " + this.value + "%";
+  };
+
+  document.getElementById("protienRange").onchange = function () {
+    var value = this.value * (this.max - this.min);
+    this.style.background =
+      "linear-gradient(to right, #B97A95 0%, #B97A95 " +
+      value +
+      "%, #C9CCD5 " +
+      value +
+      "%, #C9CCD5 100%)";
+    document.getElementById("protienHeading").innerHTML =
+      "Protien - " + this.value + "%";
+  };
+</script>
+
+{% endblock content %}

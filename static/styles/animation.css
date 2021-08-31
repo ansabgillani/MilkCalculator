@@ -1,0 +1,101 @@
+#spoon-and-sugar, #spoon-top, #steam, #milk, #tea, #milk-carton, text, #smiley {
+  opacity: 0;
+}
+
+svg {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+#teapot {
+  animation: fade-in 1s 0.1s 2 alternate ease-in-out forwards;
+}
+
+#tea {
+  animation: fade-in 0.8s 0.3s 2 alternate ease-in-out forwards;
+}
+
+#steam {
+  animation: fade-in 1s 1s 6 alternate ease-in-out forwards;
+}
+
+#milk-carton {
+  animation: fade-in 1s 2.1s 2 alternate ease-in-out forwards;
+}
+
+#milk {
+  animation: fade-in 0.8s 2.3s 2 alternate ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+#spoon-and-sugar {
+  animation: fade-in 1s 1.5s 1 alternate ease-in-out forwards;
+}
+
+#simple-spoon {
+  animation: fade-out-immediate 1s 2.5s forwards;
+}
+
+@keyframes fade-out-immediate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+#spoon-top {
+  animation: fade-out 1s 2.5s 1 alternate ease-in-out;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#sugar-1 {
+   animation: drop 1s 2.5s 1 ease-in-out forwards;
+}
+
+#sugar-2 {
+   animation: drop 1s 2.5s 1 ease-in-out forwards;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  99% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  
+  100% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+text {
+  animation: fade-in 1.5s 7.0s 2 alternate ease-in-out forwards;
+}
+
+#smiley {
+  animation: fade-in 1.0s 8.5s 1 alternate ease-in-out forwards;
+}

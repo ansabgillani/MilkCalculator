@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container" style="height: 100%;width: 100%;padding: 0;">
+        <div class="row" style="height: 37%;">
+            <div class="col d-flex d-xs-flex justify-content-center align-items-center justify-content-xs-center align-items-xs-center" style="height: 50%;">
+                <h1 class="d-md-flex" style="font-family: Sora, sans-serif;color: #082032;">
+                    {{ response['header_message'] }}</h1>
+            </div>
+            <div class="heading col-md-12 text-center d-md-flex justify-content-md-center align-items-md-center"
+                 style="height: 25%;">
+                <p>{{ response['follow_up_message'] }}</p>
+            </div>
+            <div class="heading col-md-12 text-center d-md-flex justify-content-md-center align-items-md-center"
+                 style="height: 25%;">
+                <p>Results in fat {{ response['fat'] }}%, protein {{ response['protein'] }}%, sugar {{ response['sugar'] }}%</p>
+            </div>
+        </div>
+        <div class="row d-flex d-md-flex justify-content-center align-items-center justify-content-md-center align-items-md-center"
+             style="height: 60%;margin: 0 0 5% 0;width: 100%;">
+            <div class="table-col col-md-6 d-md-flex justify-content-md-center align-items-md-center"
+                 style="padding: 0;">
+                <div class="table-responsive"
+                     style="width: 100%;">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th class="heading" style="text-align: center"><strong>Ingredients</strong></th>
+                            <th class="heading" style="text-align: center"><strong>Percentage</strong></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="heading">Whole</td>
+                            <td class="heading">{{ response['whole'] }}%</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">Semi</td>
+                            <td class="heading">{{ response['semi'] }}%</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">Skimmed</td>
+                            <td class="heading">{{ response['skimmed'] }}%</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">FD Whole</td>
+                            <td class="heading">{{ response['fd_whole'] }}%</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">FD Semi</td>
+                            <td class="heading">{{ response['fd_semi'] }}%</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">FD Skimmed</td>
+                            <td class="heading">{{ response['fd_skimmed'] }}%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
